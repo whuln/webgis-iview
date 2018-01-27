@@ -1,188 +1,152 @@
-<template>
-    <!-- <div class="app">
-        <div id=map>
-            <p >map container</p>
-        </div>
-     
-        <div id=toolBar>
-             <Button type="primary">Primary</Button>
-        </div>    
-        <div id=showArea></div>      
-    </div> -->
-      <div class="layout">
-        <Layout>
-            <Sider ref="side1" hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed">
+<template>   
+   <div class="layout">
+        <Layout class="layoutCon">
+            <Sider ref="side1" hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed" class="sideMenu">
                 <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
                     <MenuItem name="1-1">
                         <Icon type="ios-navigate"></Icon>
-                        <span>Option 1</span>
+                        <span>查询</span>
                     </MenuItem>
                     <MenuItem name="1-2">
                         <Icon type="search"></Icon>
-                        <span>Option 2</span>
+                        <span>标注</span>
                     </MenuItem>
-                    <MenuItem name="1-3">
+                    <MenuItem name="1-3">  
                         <Icon type="settings"></Icon>
-                        <span>Option 3</span>
+                        <span>书签</span>
                     </MenuItem>
                 </Menu>
             </Sider>
             <Layout>
                 <Header :style="{padding: 0}" class="layout-header-bar">
                     <Icon @click.native="collapsedSider" :class="rotateIcon" :style="{margin: '20px 20px 0'}" type="navicon-round" size="24"></Icon>
+                    <span class='logoTitle'>黄河基础地理信息公共服务平台</span>
                 </Header>
-                <Content :style="{margin: '20px', background: '#fff', minHeight: '260px'}">
-                    Content111
+                <Content id="viewDiv" :style="{margin: '2px', background: '#fff', minHeight: '260px'}">
+                    
                 </Content>
             </Layout>
         </Layout>
     </div>
 </template>   
 <script>
-//import toolBar from "./toolbar/index";
-// export default {
-//   data() {
-//     return {
-//       msg: "Hello from vue-loader,dgdf",
-//       visiable: false
-//     };
-//   },
-//   components: {
-//    // toolBar
-//   },
-//   computed: {
-//     count() {
-//       return 'p';
-//     }
-//   },
-//   methods: {
-//     show: function() {
-//       this.visible = true;
-//       console.log("this is the first iview button!");
-//     }
-//   },
-//   mounted() {
-//     this.$store.commit("INITMAP", { load: 1 });
-//   }
-// };
-
- export default {
-        data () {
-            return {
-                isCollapsed: false
-            }
-        },
-        computed: {
-            rotateIcon () {
-                return [
-                    'menu-icon',
-                    this.isCollapsed ? 'rotate-icon' : ''
-                ];
-            },
-            menuitemClasses () {
-                return [
-                    'menu-item',
-                    this.isCollapsed ? 'collapsed-menu' : ''
-                ]
-            }
-        },
-        methods: {
-            collapsedSider () {
-                this.$refs.side1.toggleCollapse();
-            }
-        }
+import MapImageLayer from "esri/layers/MapImageLayer";
+import EsriMap from "esri/Map";
+import BaseMap from "esri/Basemap";
+import MapView from "esri/views/MapView";
+import TileLayer from "esri/layers/TileLayer";
+export default {
+  data() {
+    return {
+      isCollapsed: false,
+      baseMaps: this.$store.state.baseMaps,
+      mapUrl: this.$store.state.mapUrl
+    };
+  },
+  computed: {
+    rotateIcon() {
+      return ["menu-icon", this.isCollapsed ? "rotate-icon" : ""];
+    },
+    menuitemClasses() {
+      return ["menu-item", this.isCollapsed ? "collapsed-menu" : ""];
     }
+  },
+  methods: {
+    collapsedSider() {
+      this.$refs.side1.toggleCollapse();
+    }
+  },
+  mounted() {
+    console.log('basemaps');
+    console.log(this.baseMaps);
+    //create a basemap
+    var baseLayer1 = new TileLayer({
+      url:
+        "http://10.4.148.5:6080/arcgis/rest/services/yrgp/YRGP_MAP_YX_L06L12/MapServer"
+    });
+    var basemap1 = new BaseMap({
+      baseLayers: [baseLayer1]
+    });
+    // Create a Map instance
+    var map = new EsriMap({
+      basemap: basemap1
+    });
+    // Create a MapView instance (for 2D viewing) and set its map property to
+    // the map instance we just created
+    var view = new MapView({
+      map: map,
+      container: "viewDiv"
+    });
+  }
+};
 </script>
 <style scoped lang="scss">
-p {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
-.app {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-  width: 100%;
+  @import "./common-css.scss";
+.layout {
   height: 100%;
-  background-color: rgb(97, 226, 161);
-
-  #map {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(243, 139, 139);
-  }
-
-  #toolBar {
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
-    width: 50%;
-    height: 50px;
-    background-color: rgb(58, 212, 187);
-    z-index: 1;
-  }
-
-  #showArea {
-    position: absolute;
-    top: 10px;
-    right: 5px;
-    width: 200px;
-    height: 80%;
-    background-color: rgb(238, 30, 210);
-    z-index: 0;
-  }
+  width: 100%;
+  border: 1px solid #aed0f7;
+  background: #f5f7f9;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.layout-header-bar {
+  @include bk-blue;
+  box-shadow: 0 1px 1px rgba(20, 252, 221, 0.1);
+}
+.layout-logo-left {
+  width: 90%;
+  height: 30px;
+  background: #5b6270;
+  border-radius: 3px;
+  margin: 15px auto;
 }
 
-.layout{
-        border: 1px solid #d7dde4;
-        background: #f5f7f9;
-        position: relative;
-        border-radius: 4px;
-        overflow: hidden;
-    }
-    .layout-header-bar{
-        background: #fff;
-        box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    }
-    .layout-logo-left{
-        width: 90%;
-        height: 30px;
-        background: #5b6270;
-        border-radius: 3px;
-        margin: 15px auto;
-    }
-    .menu-icon{
-        transition: all .3s;
-    }
-    .rotate-icon{
-        transform: rotate(-90deg);
-    }
-    .menu-item span{
-        display: inline-block;
-        overflow: hidden;
-        width: 69px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        vertical-align: bottom;
-        transition: width .2s ease .2s;
-    }
-    .menu-item i{
-        transform: translateX(0px);
-        transition: font-size .2s ease, transform .2s ease;
-        vertical-align: middle;
-        font-size: 16px;
-    }
-    .collapsed-menu span{
-        width: 0px;
-        transition: width .2s ease;
-    }
-    .collapsed-menu i{
-        transform: translateX(5px);
-        transition: font-size .2s ease .2s, transform .2s ease .2s;
-        vertical-align: middle;
-        font-size: 22px;
-    }
+.sideMenu {
+     @include  bk-gray-wall;
+  }
+.menu-icon {
+  transition: all 0.3s;
+}
+.rotate-icon {
+  transform: rotate(-90deg);
+}
+.menu-item span {
+  display: inline-block;
+  overflow: hidden;
+  width: 69px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+  transition: width 0.2s ease 0.2s;
+}
+.menu-item i {
+  transform: translateX(0px);
+  transition: font-size 0.2s ease, transform 0.2s ease;
+  vertical-align: middle;
+  font-size: 16px;
+}
+.collapsed-menu span {
+  width: 0px;
+  transition: width 0.2s ease;
+}
+.collapsed-menu i {
+  transform: translateX(5px);
+  transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+  vertical-align: middle;
+  font-size: 22px;
+}
+// ----- costumize ----- //
+.logoTitle{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  //font-size: 3vh;
+  @include font1;
+  color: aliceblue;
+}
+
+.layoutCon{
+  height: 100%;
+  width: 100%;  
+}
 </style>
