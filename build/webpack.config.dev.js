@@ -37,7 +37,7 @@ module.exports = {
                 test: /\.vue$/,
                 use: [
                     'vue-loader',
-                      {
+                    {
                         loader: 'iview-loader',
                         options: {
                             prefix: false
@@ -45,7 +45,7 @@ module.exports = {
                     }
                 ]
             }, {
-                test: /\.css$/,               
+                test: /\.css$/,
                 loader: ['css-loader', 'style-loader']
             },
             {
@@ -65,7 +65,7 @@ module.exports = {
     plugins: [
         new webpack.DefinePlugin({
             BUILD_MODE: JSON.stringify('dev')
-          }),
+        }),
         new CleanWebpackPlugin(['../dev']),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
@@ -74,9 +74,15 @@ module.exports = {
         //     filename: 'vendors.[hash].js',
         //     minChunks: Infinity
         // }),
-        new CopyWebpackPlugin([{//插件的起始目录是根目录
-             from: './node_modules/iview/dist/styles', to: 'css' 
-        }]),
+        new CopyWebpackPlugin([{ //插件的起始目录是根目录
+                from: './node_modules/iview/dist/styles',
+                to: 'css'
+            },
+            // { //插件的起始目录是根目录
+            //     from: './src/imgs',
+            //     to: 'css'
+            // }
+        ]),
         new HtmlWebpackPlugin({
             title: 'Development',
             template: path.resolve(__dirname, '../html/index.dev.html'),
@@ -85,25 +91,25 @@ module.exports = {
         }),
     ],
     resolve: {
-        extensions: ['.css', '.scss', '.js', '.vue', '.json'],
+        extensions: ['.css', '.scss', '.js', '.vue', '.json', '.jpg'],
         alias: {
             'vue$': path.resolve(__dirname, '../node_modules/vue/dist/vue.common.js')
         }
     },
-    
-  externals: [
-    function (context, request, callback) {
-      if (/^dojo/.test(request) ||
-        /^dojox/.test(request) ||
-        /^dijit/.test(request) ||
-        /^dgrid/.test(request) ||
-        /^dstore/.test(request) ||
-        /^moment/.test(request) ||
-        /^esri/.test(request)) {
-        return callback(null, 'umd ' + request);
-      }
-      callback();
-    }
-  ]
-    
+
+    externals: [
+        function (context, request, callback) {
+            if (/^dojo/.test(request) ||
+                /^dojox/.test(request) ||
+                /^dijit/.test(request) ||
+                /^dgrid/.test(request) ||
+                /^dstore/.test(request) ||
+                /^moment/.test(request) ||
+                /^esri/.test(request)) {
+                return callback(null, 'umd ' + request);
+            }
+            callback();
+        }
+    ]
+
 }
