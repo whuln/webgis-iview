@@ -2,53 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b25429c-c379-4f34-89f3-181698cf6690" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/html/data-engine.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2017/.npmignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2017/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2017/lib/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/babel-preset-es2017/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/flydialog/FlyDialog.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/flydialog/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/flydialog/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/flydialog/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/.babelrc" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/.eslintignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/.eslintrc.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/.npmignore" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/build/webpack.dev.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/build/webpack.prod.config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/examples/App.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/examples/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/examples/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/lib/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/src/Dialog.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/src/assets/images/close.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/src/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/BatchInput.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/FamilyInfoInput.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/GroupInfoInput.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/JitiInfoInput.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/LandInfoInput.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/datamanage/index.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/flydialog/FlyDialog.vue" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/components/flydialog/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/data-engine.js" />
-      <change beforePath="$PROJECT_DIR$/.idea/iview-demo.iml" afterPath="$PROJECT_DIR$/.idea/iview-demo.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/webpack.config.dev.js" afterPath="$PROJECT_DIR$/build/webpack.config.dev.js" />
-      <change beforePath="$PROJECT_DIR$/html/index.dev.html" afterPath="$PROJECT_DIR$/html/index.dev.html" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change beforePath="$PROJECT_DIR$/src/LMap/LMap.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/LMap/index.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/LMap/test.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/components/MapSwitcher.vue" afterPath="$PROJECT_DIR$/src/components/MapSwitcher.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/app.vue" afterPath="$PROJECT_DIR$/src/components/app.vue" />
-      <change beforePath="$PROJECT_DIR$/src/components/common-css.scss" afterPath="$PROJECT_DIR$/src/components/common-css.scss" />
+      <change beforePath="$PROJECT_DIR$/html/data-engine.html" afterPath="$PROJECT_DIR$/html/data-engine.html" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flydialog/README.md" afterPath="$PROJECT_DIR$/node_modules/flydialog/README.md" />
+      <change beforePath="$PROJECT_DIR$/node_modules/flydialog/index.js" afterPath="$PROJECT_DIR$/node_modules/flydialog/index.js" />
+      <change beforePath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/lib/index.js" afterPath="$PROJECT_DIR$/node_modules/hsy-vue-dialog/lib/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/BatchInput.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/BatchInput.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/FamilyInfoInput.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/FamilyInfoInput.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/GroupInfoInput.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/GroupInfoInput.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/JitiInfoInput.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/JitiInfoInput.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/LandInfoInput.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/LandInfoInput.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/datamanage/index.vue" afterPath="$PROJECT_DIR$/src/components/datamanage/index.vue" />
+      <change beforePath="$PROJECT_DIR$/src/components/flydialog/index.js" afterPath="$PROJECT_DIR$/src/components/flydialog/index.js" />
+      <change beforePath="$PROJECT_DIR$/src/data-engine.js" afterPath="$PROJECT_DIR$/src/data-engine.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -99,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/datamanage/FamilyInfoInput.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="666">
-              <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+              <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#TimePicker#0;n#fly-dialog#1;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#742#787#0" expanded="true" />
@@ -122,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/datamanage/GroupInfoInput.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="900">
-              <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+              <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -154,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/flydialog/FlyDialog.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="18">
-              <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+              <caret line="77" column="47" lean-forward="false" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -164,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/src/components/flydialog/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="162">
-              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+              <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -332,12 +298,20 @@
       <workItem from="1520908381430" duration="15999000" />
       <workItem from="1520939340117" duration="584000" />
       <workItem from="1520988745986" duration="6246000" />
-      <workItem from="1521019228080" duration="643000" />
+      <workItem from="1521019228080" duration="741000" />
     </task>
+    <task id="LOCAL-00001" summary="数据处理">
+      <created>1521019953247</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521019953247</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57853000" />
+    <option name="totallyTimeSpent" value="57951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -744,7 +718,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/flydialog/FlyDialog.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
-          <caret line="77" column="47" lean-forward="true" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
+          <caret line="77" column="47" lean-forward="false" selection-start-line="77" selection-start-column="47" selection-end-line="77" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -752,7 +726,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/flydialog/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -760,7 +734,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/datamanage/GroupInfoInput.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
-          <caret line="50" column="28" lean-forward="true" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
+          <caret line="50" column="28" lean-forward="false" selection-start-line="50" selection-start-column="28" selection-end-line="50" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -768,7 +742,7 @@
     <entry file="file://$PROJECT_DIR$/src/components/datamanage/FamilyInfoInput.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="666">
-          <caret line="37" column="20" lean-forward="true" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#TimePicker#0;n#fly-dialog#1;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#742#787#0" expanded="true" />
