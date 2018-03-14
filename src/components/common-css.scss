@@ -1,7 +1,14 @@
 $blue: #1875e7;
-$fs-1: 24px;
+$fs-1: 26px;
 .class1 {
     border: 1px solid rgb(230, 12, 12);
+}
+
+.a_white{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+ // font-weight: bold;
 }
 
 @mixin font1 {
@@ -18,4 +25,8 @@ $fs-1: 24px;
     background: linear-gradient(135deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px), linear-gradient(225deg, #708090 22px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
     background-color: #708090;
     background-size: 64px 128px
+}
+
+@mixin bk-dark {
+  background: #5b6270;
 }

@@ -6,7 +6,8 @@ const webpack = require('webpack');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, '../src/index.dev.js')
+        main: path.resolve(__dirname, '../src/index.dev.js'),
+        dataEngine:path.resolve(__dirname, '../src/data-engine.js')
     },
     output: {
         path: path.resolve(__dirname, '../dev'),
@@ -27,7 +28,7 @@ module.exports = {
                 //include: [path.resolve(__dirname, "../src")],
                 loader: 'babel-loader',
                 options: {
-                    presets: ['env'],
+                    presets: ['env','es2017'],
                     plugins: [
                         'transform-object-rest-spread'
                     ]
@@ -84,11 +85,17 @@ module.exports = {
             // }
         ]),
         new HtmlWebpackPlugin({
-            title: 'Development',
+            title: '首页',
             template: path.resolve(__dirname, '../html/index.dev.html'),
             filename: 'index.html',
             inject: false
         }),
+        new HtmlWebpackPlugin({
+            title: '数据管理',
+            template: path.resolve(__dirname, '../html/data-engine.html'),
+            filename: 'data-engine.html',
+            inject: false
+        })
     ],
     resolve: {
         extensions: ['.css', '.scss', '.js', '.vue', '.json', '.jpg'],

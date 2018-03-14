@@ -2,7 +2,7 @@
     <div>
         <Checkbox v-model="visiable">图层</Checkbox>
         <div v-show="visiable">
-          <Tag>底图</Tag><br>
+          <Tag  type="border" color="blue">底图</Tag><br>
           <RadioGroup  v-model="activeBmIndex" vertical>
               <Radio label="0">
                   <Icon type="image"></Icon>
@@ -19,8 +19,8 @@
               </Radio>
           </RadioGroup>
           <br>
-          <Tag>专题</Tag><br>         
-          <Tree :data="data2" @on-check-change="onTreeCheckChange" show-checkbox></Tree>
+          <Tag type="border" color="blue">专题</Tag><br>
+          <Tree class="sublayertree" :data="data2" @on-check-change="onTreeCheckChange" show-checkbox></Tree>
         </div>
     </div>
 </template>
@@ -163,3 +163,8 @@ export default {
   }
 };
 </script>
+<style scoped>
+    .sublayertree{
+        color: #d9ecff;
+    }
+</style>

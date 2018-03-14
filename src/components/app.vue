@@ -1,10 +1,14 @@
 <template>   
    <div class="layout">      
             <Layout class="layoutCon">
-                <Header :style="{padding: 0}" class="layout-header-bar">                  
-                    <span class='logoTitle'>黄河基础地理信息公共服务平台</span>
+                <Header :style="{padding: 0}" class="layout-header-bar">
+                    <Row type="flex" justify="space-between" align="bottom">
+                        <Col span="22">  <span class='logoTitle'>泾河东庄移民数据管理系统</span></Col>
+                        <Col span="2"><a class="a_white" href="data-engine.html" target="_blank">数据管理</a></Col>
+                    </Row>
+
                 </Header>
-                <Content id="viewDiv" :style="{margin: '2px', background: '#fff', minHeight: '260px'}">
+                <Content id="viewDiv" :style="{margin: '0px', background: '#fff', minHeight: '260px'}">
                     
                 </Content>
             </Layout>    
@@ -52,6 +56,7 @@ export default {
     });
 
     _view.ui.remove('attribution');
+    _view.ui.move("zoom", "top-right");
  //初始化vuex中全局变量, mapview 仅会被初始化一次    
     this.$store.commit('INITMAPVIEW',_view);
       //   console.log('app mounted');
@@ -71,7 +76,7 @@ export default {
   overflow: hidden;
 }
 .layout-header-bar {
-  @include bk-blue;
+  @include bk-dark;
   box-shadow: 0 1px 1px rgba(20, 252, 221, 0.1);
 }
 
@@ -89,8 +94,9 @@ export default {
 }
 .switcher{
   position: absolute;
-  top: 160px;
-  left: 15px;
-  background-color: white;
+  top: 80px;
+  left: 5px;
+  background-color: whitesmoke;
+  //  color: #d9ecff;
 }
 </style>
